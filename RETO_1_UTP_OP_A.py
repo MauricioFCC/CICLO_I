@@ -10,7 +10,7 @@
 # Valor total = cantidad $ CDT - valor a perder
 
 ####### Variables #######
-usuario = 'usuario'
+usuario = 'AB1012'
 capital = 1000000
 plazo = 12
 tiempo = 3
