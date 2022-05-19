@@ -19,3 +19,4 @@ capital = int(input('Ingrese capital: '))
 tiempo = int(input('ingrse el tiempo en meses: '))
 output = CDT (usuario, capital, tiempo)
 print (output)
+
