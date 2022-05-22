@@ -2,9 +2,6 @@
 # Mauricio Carvajal grupo 05 UTP Telegram: @Mauro_Co
 # Funcion que calcula el promedio de una nota en Python
 
-from gc import get_referents
-
-
 def promedioNota (n1, n2, n3, n4):
     nNotas = 4
     promedio = round((n1 + n2 + n3 + n4)/ nNotas, 2)
@@ -14,12 +11,12 @@ print ('El promedio es: ', promedioNota(3.0, 2.1, 5.0, 4.7))
 
 # Encapsulamiento con diccionarios
 def promedioNotasd (dicNotas):
-    sume = 0
-    sume += dicNotas['n1']
+    sume = 0 # suma inicia en 0
+    sume += dicNotas['n1'] # Se agregan valores a 0
     sume += dicNotas['n2']
     sume += dicNotas['n3']
     sume += dicNotas['n4']
-    promedios = round(sume / 4, 2)
+    promedios = round(sume / 4, 2) # se divide y redondea a 2 sifras
     return promedios
 
 dicNotas = {} # Diccionario vacio
