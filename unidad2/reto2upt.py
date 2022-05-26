@@ -18,19 +18,47 @@ def cliente (dic):
     if dic['edad'] > 18:
         outd ['atraccion'] = 'X-Treme'
         outd ['apto'] = True
-    if dic ['edad'] < 7:
+    elif dic ['edad'] < 7:
         outd ['atraccion'] = 'N/A'
         outd ['atraccion'] = 'N/A'
         outd ['apto'] = False
+    elif dic ['edad'] > 15 < 17 and dic ['primer_ingreso'] == True:
+        outd ['atraccion'] = 'Carros chocones'
+        outd ['apto'] = True
+    elif dic ['edad'] > 15 < 17 and dic ['primer_ingreso'] == False:
+        outd ['atraccion'] = 'Carros chocones'
+        outd ['apto'] = True
+    elif dic ['edad'] > 7 < 14 and dic ['primer_ingreso'] == True:
+        outd ['atraccion'] = 'Sillas voladoras'
+        outd ['apto'] = True
+    elif dic ['edad'] > 7 < 14 and dic ['primer_ingreso'] == False:
+        outd ['atraccion'] = 'Sillas voladoras'
+        outd ['apto'] = True
     outd ['primer_ingreso'] = dic ['primer_ingreso']
     if dic ['edad'] > 18 and dic ['primer_ingreso'] == True:
         outd ['total_boleta'] = 20000 - (20000 * 0.05)
-    if dic ['edad'] > 18 and dic ['primer_ingreso'] == False:
+    elif dic ['edad'] > 18 and dic ['primer_ingreso'] == False:
         outd ['total_boleta'] = 20000
-    if dic ['edad'] < 7:
+    elif dic ['edad'] < 7:
         outd ['total_boleta'] = 'N/A'
-    
-           
+    elif dic ['edad'] > 15 < 17 and dic ['primer_ingreso'] == True:
+        outd ['atraccion'] = 'Carros chocones'
+        outd ['apto'] = True
+        outd ['primer_ingreso'] == True       
+        outd ['total_boleta'] = 5000 - (5000 * 0.07)
+    elif dic ['edad'] > 15 < 17 and dic ['primer_ingreso'] == False:
+        outd ['atraccion'] = 'Carros chocones'
+        outd ['apto'] = True
+        outd ['primer_ingreso'] == True 
+        outd ['total_boleta'] = 5000
+    elif dic ['edad'] > 7 < 14 and dic ['primer_ingreso'] == True:
+        outd ['atraccion'] = 'Sillas voladoras'
+        outd ['total_boleta'] = 10000 - (10000 * 0.05)
+    else: 
+        dic ['edad'] > 7 < 14 and dic ['primer_ingreso'] == False
+        outd ['atraccion'] = 'Sillas voladoras'
+        outd ['total_boleta'] = 10000
+        
     return outd
 
 dic1 = {'id_cliente' : 1, 'nombre' :  'Johana Fernandez', 'edad' : 20, 'primer_ingreso' : True}
@@ -45,3 +73,6 @@ print (cliente(dic1))
 print (cliente(dic2))
 print (cliente(dic3))
 print (cliente(dic4))
+print (cliente(dic5))
+print (cliente(dic6))
+print (cliente(dic7))
